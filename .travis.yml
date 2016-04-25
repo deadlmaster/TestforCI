@@ -1,3 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
 language: python
 python:
   - "2.6"
@@ -10,4 +15,7 @@ python:
   - "nightly" # currently points to 3.6-dev
 # command to install dependencies
 # command to run tests
-script: nosetests
+script:
+  - docker/build
+  - docker login -e="$dead-master@msn.com" -u="$deadlmaster" -p="$30len397"
+  - docker pull deadlmaster/docker-whale
