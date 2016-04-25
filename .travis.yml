@@ -17,5 +17,5 @@ python:
 # command to run tests
 script:
   - docker/build
-  - docker login -e="$dead-master@msn.com" -u="$deadlmaster" -p="$30len397"
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER-PASSWORD"
   - docker pull deadlmaster/docker-whale
